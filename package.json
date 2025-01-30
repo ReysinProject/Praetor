@@ -1,7 +1,7 @@
 {
   "name": "@reysin/praetor",
   "version": "1.0.0",
-  "description": "",
+  "description": "Praetor is a simple Typescript library to manage permissions in your application.",
   "devDependencies": {
     "ts-node": "^10.9.2",
     "tsup": "^8.3.5",
@@ -22,9 +22,13 @@
   },
   "keywords": [
     "typescript",
-    "library"
+    "library",
+    "grant",
+    "permissions",
+    "manager",
+    "reysin"
   ],
-  "author": "Your Name",
+  "author": "Reysin",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -33,5 +37,5 @@
   "bugs": {
     "url": "https://github.com/ReysinProject/Praetor/issues"
   },
-  "homepage": "https://github.com/ReysinProject/Praetor#readme"
+  "homepage": "https://praetor.reysin.fr/"
 }
