@@ -85,29 +85,7 @@ class Policy<Actor, Resource> {
 }
 ```
 
-## Advanced Usage
-
-### Multiple Rules per Action
-
-```typescript
-const PostPolicy = new Policy<User, Post>('post');
-
-PostPolicy.rule('edit', (actor, post) => actor.id === post.authorId);
-PostPolicy.rule('edit', (actor, post) => actor.role === 'admin');
-```
-
-### Async Rules
-
-```typescript
-const DocPolicy = new Policy<User, Document>('document');
-
-DocPolicy.rule('view', async (actor, doc) => {
-    const permissions = await fetchUserPermissions(actor.id);
-    return permissions.includes(doc.id);
-});
-```
-
-### Custom Resource Types
+## Custom Resource Types
 
 ```typescript
 interface User {
