@@ -2,7 +2,6 @@
   "name": "@reysin/praetor",
   "version": "1.0.0",
   "description": "Praetor is a simple Typescript library to manage permissions in your application.",
-  "private": false,
   "devDependencies": {
     "ts-node": "^10.9.2",
     "tsup": "^8.3.5",
