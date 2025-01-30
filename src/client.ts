@@ -1,19 +1,17 @@
-class PraetorClient {
+import { Policy } from './policy';
 
-    constructor() {
-        console.log('PraetorClient constructor');
+export class Client {
+    private policies: Map<string, Policy<any, any>> = new Map();
+
+    register<A, R>(resourceType: string, policy: Policy<A, R>): void {
+        this.policies.set(resourceType, policy);
     }
 
-    public register(policy: Policy) {
-        console.log('PraetorClient register');
+    allows<A, R>(resourceType: string, action: string, actor: A, resource: R, context?: any): boolean {
+        const policy = this.policies.get(resourceType);
+        if (policy) {
+            return policy.allows(action, actor, resource, context);
+        }
+        return false;
     }
-
-    public allows(action: string, resource: string, context: any) {
-        console.log('PraetorClient allows');
-
-        console.log('action: ' + action);
-        console.log('resource: ' + resource);
-        console.log('context: ' + context);
-    }
-
 }

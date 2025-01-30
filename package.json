@@ -1,8 +1,9 @@
 {
-  "name": "praetor",
+  "name": "@reysin/praetor",
   "version": "1.0.0",
   "description": "",
   "devDependencies": {
+    "ts-node": "^10.9.2",
     "tsup": "^8.3.5",
     "typescript": "^5.7.3",
     "vitest": "^3.0.4"
