@@ -1,15 +1,30 @@
 {
-  "name": "Praetor",
+  "name": "praetor",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-    "tsup": "^8.3.5"
-  }
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.3"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": ["typescript", "library"],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ReysinProject/Praetor"
+  },
+  "bugs": {
+    "url": "https://github.com/ReysinProject/Praetor/issues"
+  },
+  "homepage": "https://github.com/ReysinProject/Praetor#readme"
 }
